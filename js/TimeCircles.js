@@ -815,23 +815,23 @@
         time: {
             Days: {
                 show: true,
-                text: "Days",
-                color: "#FC6"
+                text: "Dias",
+                color: "#34aadc"
             },
             Hours: {
                 show: true,
-                text: "Hours",
-                color: "#9CF"
+                text: "Horas",
+                color: "#4cd964"
             },
             Minutes: {
                 show: true,
-                text: "Minutes",
-                color: "#BFB"
+                text: "Minutos",
+                color: "#ff9500"
             },
             Seconds: {
                 show: true,
-                text: "Seconds",
-                color: "#F99"
+                text: "Segundos",
+                color: "#ff3b30"
             }
         }
     };
