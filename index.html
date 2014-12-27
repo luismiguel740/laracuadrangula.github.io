@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/TimeCircles.css">
 	<!-- CSS end here -->
 	<!-- Google fonts start here -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -49,25 +50,17 @@
 		</section>
 		<!-- Slogan end here -->
 		<!-- Count Down start here -->
-		<section class="count-down-wrapper fade-down">
-			<ul class="row count-down">                       
-				<li class="col-md-3 col-sm-6">   
-					<input class="knob days" data-readonly=true data-min="0" data-max="365" data-width="260" data-height="260" data-thickness="0.07" data-fgcolor="#34aadc" data-bgColor="#e1e2e6" data-angleOffset="180">
-					<span id="days-title">Dias</span>
-				</li>    
-				<li class="col-md-3 col-sm-6"> 
-					<input class="knob hour" data-readonly=true data-min="0" data-max="24" data-width="260" data-height="260" data-thickness="0.07" data-fgcolor="#4cd964" data-bgColor="#e1e2e6" data-angleOffset="180">
-					<span id="hours-title">horas</span>
-				</li>    
-				<li class="col-md-3 col-sm-6"> 
-					<input class="knob minute" data-readonly=true data-min="0" data-max="60" data-width="260" data-height="260" data-thickness="0.07" data-fgcolor="#ff9500" data-bgColor="#e1e2e6" data-angleOffset="180">
-					<span id="mins-title">minutos</span>
-				</li>    
-				<li class="col-md-3 col-sm-6"> 
-					<input class="knob second" data-readonly=true data-min="0" data-max="60" data-width="260" data-height="260" data-thickness="0.07" data-fgcolor="#ff3b30" data-bgColor="#e1e2e6" data-angleOffset="180">
-					<span id="secs-title">segundos</span>
-				</li>                
-			</ul>              
+		<section >
+			<div class="row">
+			   <div class="col-sm-12">
+					<div class="timing">
+						<div id="count-down" data-date="2015-03-03 09:45:00">
+								
+						</div>
+					</div>
+					<!-- /.timing -->
+			   </div>
+			</div>
 		</section>
 		<!-- Count Down end here -->
 		<!-- Newsletter start here -->
@@ -187,6 +180,30 @@
 		<script src="js/jquery.ccountdown.js"></script>
 		<script src="js/init.js"></script>
 		<script src="js/general.js"></script>
+		<script src="js/TimeCircles.js"></script>
 <!-- Javascript framework and plugins end here -->
+    <script type="text/javascript">
+    	$(function() {
+				// Invoke the plugin
+				$('input, textarea').placeholder();
+			});
+    </script>
+    <script>
+      $("#count-down").TimeCircles(
+       {   
+           circle_bg_color: "#fff",
+           use_background: true,
+           bg_width: 1.0,
+           fg_width: 0.03,
+           time: {
+                Days: { color: "#34aadc" },
+                Hours: { color: "#4cd964" },
+                Minutes: { color: "#ff9500" },
+                Seconds: { color: "#ff3b30" }
+            }
+       }
+    );
+
+    </script>
 </body>
 </html>
